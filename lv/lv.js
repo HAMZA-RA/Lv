@@ -1,13 +1,23 @@
-function changeText(answer) {
-    var message = document.getElementById("message");
-    if (answer === "Yes") {
-      message.innerHTML = "I love you!";
-    }
-  }
+const warpper =   document.querySelector('.warpper');
+
+const question = document.querySelector('.question');
+
+const yesBtn = document.querySelector('.yes-btn');
+
+const noBtn = document.querySelector('.no-btn');
+
+const warpperRect = warpper.getBoundingClientRect();
+
+const noBtnRect = noBtn.getBoundingClientRect();
+
+yesBtn.addEventListener('click', () => {
+  question.innerHTML = 'I Love You Too!!!';
+});
+
+noBtn.addEventListener('click', () => {
+  const i = Math.floor(Math.random() * (warpperRect.width - noBtnRect.width)) + 1;
+  const j = Math.floor(Math.random() * (warpperRect.height - noBtnRect.height)) + 1;
+  noBtn.style.left = i + 'px';
+  noBtn.style.top = j + 'px'; });
+
   
-  function runAway() {
-    var buttons = document.getElementById("buttons");
-    buttons.style.display = "none";
-    var message = document.getElementById("message");
-    message.innerHTML = "Sorry to hear that. Goodbye!";
-  }
