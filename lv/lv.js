@@ -11,7 +11,7 @@ const warpperRect = warpper.getBoundingClientRect();
 const noBtnRect = noBtn.getBoundingClientRect();
 
 yesBtn.addEventListener('click', () => {
-  question.innerHTML = 'I Love You Too!!!';
+  question.innerHTML = 'I Love U Too!!!';
 });
 
 noBtn.addEventListener('click', () => {
